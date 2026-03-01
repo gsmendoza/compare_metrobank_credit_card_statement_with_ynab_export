@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require "compare_metrobank_credit_card_statement_with_ynab_export"
+
+if ARGV.size < 3
+  puts "Usage: compare-metrobank-ynab <metrobank_txt> <ynab_csv> <output_csv>"
+  exit 1
+end
+
+mb_path = ARGV[0]
+ynab_path = ARGV[1]
+output_path = ARGV[2]
+
+CompareMetrobankCreditCardStatementWithYnabExport.run(mb_path, ynab_path, output_path)

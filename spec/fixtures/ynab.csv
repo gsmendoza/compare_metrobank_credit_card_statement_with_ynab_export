@@ -1,0 +1,5 @@
+Account,Flag,Date,Payee,Category Group/Category,Category Group,Category,Memo,Outflow,Inflow,Cleared
+CC / Metrobank,,2026-01-18,Transfer : L / Friend A,Unplanned Expenses (0K): Unplanned / Loans,Unplanned Expenses (0K),Unplanned / Loans,"SOME LICENSE FEE, SOME LICENSE FEE,",20876.47,0,Uncleared
+CC / Metrobank,,2026-01-08,Streaming Service,Discretionary (19K): Monthly / Family / Streaming,Discretionary (19K),Monthly / Family / Streaming,"Streaming Service, City, SG",625.19,0,Uncleared
+CC / Metrobank,,2026-01-10,Transfer : B / MB / Passbook,,,,,0,8650.76,Uncleared
+CC / Metrobank,,2026-01-07,Online Store,Discretionary / Friend B (7K): Variable / Friend B / Tech,Discretionary / Friend B (7K),Variable / Friend B / Tech,"Online Store, City, GB",797.9,0,Uncleared
