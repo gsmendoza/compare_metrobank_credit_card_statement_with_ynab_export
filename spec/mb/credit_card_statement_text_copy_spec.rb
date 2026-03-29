@@ -29,6 +29,26 @@ RSpec.describe CompareMetrobankCreditCardStatementWithYnabExport::MB::CreditCard
       payment = transactions.find { |t| t.description.include?("PAYMENT - THANK YOU") }
       expect(payment.amount).to eq(BigDecimal("-12717.46"))
     end
+
+    context "when amount is on the same line as description" do
+      let(:content) do
+        <<~TEXT
+          Statement Date
+          21 January 2026
+          PESO ACCOUNT DETAILS
+          01/22 01/21 GAS STATION, CITY 2,000.00
+          01/23 01/22 RESTAURANT 500.00 C
+        TEXT
+      end
+
+      it "parses transactions and amounts correctly" do
+        expect(transactions.size).to eq(2)
+        expect(transactions[0].description).to eq("GAS STATION, CITY")
+        expect(transactions[0].amount).to eq(BigDecimal("2000.00"))
+        expect(transactions[1].description).to eq("RESTAURANT")
+        expect(transactions[1].amount).to eq(BigDecimal("-500.00"))
+      end
+    end
   end
 
   describe "#lines" do
