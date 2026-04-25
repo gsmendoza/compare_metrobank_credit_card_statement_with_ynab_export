@@ -8,14 +8,17 @@ Gem::Specification.new do |spec|
   spec.authors = ["George Mendoza"]
   spec.email = ["gsmendoza@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "Compare Metrobank credit card statement text to a YNAB CSV export"
+  spec.description = <<~DESC
+    Parses a Metrobank credit card statement (text copy) and a YNAB register export (CSV),
+    matches transactions by amount and approximate date, and writes a comparison CSV.
+    Includes the compare-metrobank-ynab executable.
+  DESC
+  spec.homepage = "https://github.com/gsmendoza/compare_metrobank_credit_card_statement_with_ynab_export"
   spec.required_ruby_version = ">= 3.2.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
+  spec.metadata["source_code_uri"] = spec.homepage
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
